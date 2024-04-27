@@ -1,0 +1,87 @@
+.dialogue {
+    border-radius: 20px;
+    position: fixed;
+    background-color: rgba(249,249,255,1);
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: calc(100% - 98px);
+    width: calc(100% - 98px);
+    box-shadow: 0 0 32px rgba(138,145,158,0.8);
+    border: 1px solid rgba(138,145,158,0.3);
+    max-width: 1000px;
+    display: block;
+    transition: opacity 0.25s ease-in;
+    overflow: clip;
+    z-index: 9999;
+}
+
+.dialogue > div > div {
+    padding: 32px;
+}
+
+.dialogue-close-btn {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.dialogue-close-btn > svg {
+    fill: #25274ddd;
+    transition: fill 0.3s;
+}
+
+.dialogue-close-btn:hover > svg {
+    fill: #25274dff;
+}
+
+.dialogue-close-btn:hover {
+    width: 19px;
+    height: 19px;
+    top: 31.5px;
+    right: 31.5px;
+}
+
+.dialogue .input-group label {
+    background-color: rgba(249,249,255,1);
+}
+
+.scroll-wrap::-webkit-scrollbar {
+    width: 10px;
+}
+   
+.scroll-wrap::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(138,145,158,0.8);
+    border-radius: 0 16px 16px 0;
+}
+   
+.scroll-wrap::-webkit-scrollbar-thumb {
+    border-radius: 32px;
+    background-color: #BFC0CC;
+}
+
+.scroll-wrap {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+
+#bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 15, 31, 0.66);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    opacity: 0;
+    display: none;
+    transition: opacity 0.25s ease-in;
+    z-index: 9990;
+}

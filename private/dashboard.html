@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SXTA</title>
+    <link rel="stylesheet" href="/assets/styles/dashboard.css" />
+    <link rel="stylesheet" href="/assets/styles/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;800;900&family=Work+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/images/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+
+    <meta property="og:site_name" content="SXTA" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SXTA - Dashboard" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="SXTA - Dashboard">
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' blob: data:;">
+    <link rel="apple-touch-icon" href="/assets/images/icon.png" />
+    <meta name="msapplication-TileImage" content="/assets/images/icon.png" />
+
+    <script src="/assets/scripts/common.js"></script>
+</head>
+<body>
+    <nav>
+        <div id="nav-dashboard" class="selected">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48"><path d="M25.5 18V7.5Q25.5 6.85 25.925 6.425Q26.35 6 27 6H40.5Q41.15 6 41.575 6.425Q42 6.85 42 7.5V18Q42 18.65 41.575 19.075Q41.15 19.5 40.5 19.5H27Q26.35 19.5 25.925 19.075Q25.5 18.65 25.5 18ZM6 24V7.5Q6 6.85 6.425 6.425Q6.85 6 7.5 6H21Q21.65 6 22.075 6.425Q22.5 6.85 22.5 7.5V24Q22.5 24.65 22.075 25.075Q21.65 25.5 21 25.5H7.5Q6.85 25.5 6.425 25.075Q6 24.65 6 24ZM25.5 40.5V24Q25.5 23.35 25.925 22.925Q26.35 22.5 27 22.5H40.5Q41.15 22.5 41.575 22.925Q42 23.35 42 24V40.5Q42 41.15 41.575 41.575Q41.15 42 40.5 42H27Q26.35 42 25.925 41.575Q25.5 41.15 25.5 40.5ZM6 40.5V30Q6 29.35 6.425 28.925Q6.85 28.5 7.5 28.5H21Q21.65 28.5 22.075 28.925Q22.5 29.35 22.5 30V40.5Q22.5 41.15 22.075 41.575Q21.65 42 21 42H7.5Q6.85 42 6.425 41.575Q6 41.15 6 40.5Z"/></svg>
+            <span>Dashboard</span>
+        </div>
+        <div id="nav-timetable">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-15 -18 147.88 153.01"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style><g><path class="st0" d="M16.35,0h90.19c8.99,0,16.35,7.36,16.35,16.35v75.32c0,8.99-7.36,16.35-16.35,16.35H16.35 C7.36,108.01,0,100.66,0,91.67V16.35C0,7.36,7.36,0,16.35,0L16.35,0z M64.64,77.54h49.62v21.2H64.64V77.54L64.64,77.54z M8.02,77.54h49.62v21.2H8.02V77.54L8.02,77.54z M8.02,21.13h49.62v21.2H8.02V21.13L8.02,21.13z M8.02,49.34h49.62v21.2H8.02V49.34 L8.02,49.34z M64.64,21.13h49.62v21.2H64.64V21.13L64.64,21.13z M64.64,49.34h49.62v21.2H64.64V49.34L64.64,49.34z"/></g></svg>
+            <span>Timetable</span>
+        </div>
+    </nav>
+    <main>
+        <h2>Dashboard</h2>
+        <table id="calendar" class="styled-table">
+            <thead>
+                <tr id="calendar-head">
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="calendar-row-1">
+                </tr>
+                <tr id="calendar-row-2">
+                </tr>
+            </tbody>
+        </table>
+        <section>
+            <h3>Upcoming</h3>
+            <div id="dashboard-upcoming" class="task-list"></div>
+        </section>
+    </main>
+    <div id="notifications"></div>
+    <script src="/assets/scripts/common.js"></script>
+    <script type="module" src="/assets/scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SXTA - Sign in</title>
+    <link rel="stylesheet" href="/assets/styles/signin.css" />
+    <link rel="stylesheet" href="/assets/styles/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;800;900&family=Work+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/images/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+
+    <meta property="og:site_name" content="SXTA" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SXTA - Sign in" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="SXTA - Sign in">
+
+    <link rel="apple-touch-icon" href="/assets/images/icon.png" />
+    <meta name="msapplication-TileImage" content="/assets/images/icon.png" />
+
+    <script src="/assets/scripts/common.js"></script>
+</head>
+<body>
+    <main>
+        <div id="signin-title">Sign in</div>
+        <form id="SID-form" method="post" novalidate>
+            <div class="input-group">
+                <input autofocus id="session-id" name="session-id" placeholder=" " type="text" autocomplete="off" />
+                <label for="session-id">Session ID</label>
+                <div></div>
+            </div>
+            <button class="full-width submit-btn" id="SID-continue-btn" type="submit">Continue</button>
+            <button class="outline full-width" id="SID-info-btn" type="button">Learn how to find your Session ID</button>
+            <div class="legal-terms">
+                <a href="/privacy">Privacy & Security</a> - 
+                <a href="/terms">Terms</a>
+            </div>
+        </form>
+        <form id="confirm-form" method="post" novalidate>
+            <button id="selected-user" class="outline full-width">
+                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48" class="user-icon"><path d="M11.1 35.25Q14.25 33.05 17.35 31.875Q20.45 30.7 24 30.7Q27.55 30.7 30.675 31.875Q33.8 33.05 36.95 35.25Q39.15 32.55 40.075 29.8Q41 27.05 41 24Q41 16.75 36.125 11.875Q31.25 7 24 7Q16.75 7 11.875 11.875Q7 16.75 7 24Q7 27.05 7.95 29.8Q8.9 32.55 11.1 35.25ZM24 25.5Q21.1 25.5 19.125 23.525Q17.15 21.55 17.15 18.65Q17.15 15.75 19.125 13.775Q21.1 11.8 24 11.8Q26.9 11.8 28.875 13.775Q30.85 15.75 30.85 18.65Q30.85 21.55 28.875 23.525Q26.9 25.5 24 25.5ZM24 44Q19.9 44 16.25 42.425Q12.6 40.85 9.875 38.125Q7.15 35.4 5.575 31.75Q4 28.1 4 24Q4 19.85 5.575 16.225Q7.15 12.6 9.875 9.875Q12.6 7.15 16.25 5.575Q19.9 4 24 4Q28.15 4 31.775 5.575Q35.4 7.15 38.125 9.875Q40.85 12.6 42.425 16.225Q44 19.85 44 24Q44 28.1 42.425 31.75Q40.85 35.4 38.125 38.125Q35.4 40.85 31.775 42.425Q28.15 44 24 44ZM24 41Q26.75 41 29.375 40.2Q32 39.4 34.55 37.4Q32 35.6 29.35 34.65Q26.7 33.7 24 33.7Q21.3 33.7 18.65 34.65Q16 35.6 13.45 37.4Q16 39.4 18.625 40.2Q21.25 41 24 41ZM24 22.5Q25.7 22.5 26.775 21.425Q27.85 20.35 27.85 18.65Q27.85 16.95 26.775 15.875Q25.7 14.8 24 14.8Q22.3 14.8 21.225 15.875Q20.15 16.95 20.15 18.65Q20.15 20.35 21.225 21.425Q22.3 22.5 24 22.5ZM24 18.65Q24 18.65 24 18.65Q24 18.65 24 18.65Q24 18.65 24 18.65Q24 18.65 24 18.65Q24 18.65 24 18.65Q24 18.65 24 18.65Q24 18.65 24 18.65Q24 18.65 24 18.65ZM24 37.35Q24 37.35 24 37.35Q24 37.35 24 37.35Q24 37.35 24 37.35Q24 37.35 24 37.35Q24 37.35 24 37.35Q24 37.35 24 37.35Q24 37.35 24 37.35Q24 37.35 24 37.35Z"/></svg>
+                <span class="selected-user-text"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48" class="right-icon"><path d="M18.75 36 16.6 33.85 26.5 23.95 16.6 14.05 18.75 11.9 30.8 23.95Z"/></svg>
+            </button>
+            We want you to understand your responsibilities when using this program.
+            <div class="input-desc">
+                Please carefully read the 
+                <a href="/privacy" target="_blank">Privacy & Security Policy</a> and 
+                <a href="/terms" target="_blank">Program Terms</a>
+                before continuing.
+            </div>
+            <div class="input-desc">
+                Choosing Continue means that you agree to all terms and policies.
+            </div>
+            <button id="submit-btn" class="full-width submit-btn" type="submit">Continue</button>
+            <div class="legal-terms">
+                <a href="/privacy" target="_blank">Privacy & Security</a> - 
+                <a href="/terms" target="_blank">Terms</a>
+            </div>
+        </form>
+    </main>
+    <script src="/assets/scripts/signin.js" type="module"></script>
+</body>
+</html>

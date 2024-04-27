@@ -1,0 +1,262 @@
+html, body {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+html, body, button, input, textarea {
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+}
+
+input,
+select,
+textarea {
+    border: 1px solid rgba(138,145,158,0.4);
+    border-radius: 8px;
+    -webkit-appearance: none;
+    background-color: #ffffff00;
+}
+
+input[type=checkbox] {
+    -webkit-appearance: auto;
+    padding: 8px;
+    position: absolute;
+    opacity: 0;
+}
+  
+input[type=checkbox] + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+
+input[type=checkbox] + label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    border: 1px solid rgba(138,145,158,0.4);
+    background-color: #ffffff00;
+    transition: all 0.3s;
+    box-shadow: 0 1px 8px rgba(138,145,158,0);
+}
+
+input[type=checkbox]:hover + label:before {
+    box-shadow: 0 1px 8px rgba(138,145,158,0.5);
+    border-color: rgb(36, 38, 76);
+}
+
+input[type=checkbox]:checked + label:before {
+    background-color: rgb(36, 38, 76);
+}
+
+input[type=checkbox]:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+}
+
+input[type=checkbox]:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+}
+
+input[type=checkbox]:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    background: white;
+    width: 2.5px;
+    height: 2.5px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg);
+}
+
+.input-group>input,
+.input-group>textarea {
+    width: calc(100% - 32px);
+    padding: 16px;
+    outline: 0 !important;
+    transition: all 0.4s;
+}
+
+div.input-group.error>input, div.input-group.error>textarea{
+    border: 1px solid rgba(240, 97, 109, 0.8);
+}
+
+div.input-group.error>input:focus, div.input-group.error>textarea:focus {
+    border: 1px solid rgba(240, 97, 109, 0.8);
+    box-shadow: 0 0 0 1px rgba(240, 97, 109, 0.8);
+}
+
+.input-group.error input:focus+label,
+.input-group.error input:not(:placeholder-shown)+label,
+.input-group.error textarea:focus+label,
+.input-group.error textarea:not(:placeholder-shown)+label {
+    color: #f0616d;
+}
+
+.input-group>div {
+    display: none;
+}
+
+.input-group.error>div {
+    color: #f0616d;
+    font-size: 88%;
+    margin-top: 8px;
+    display: block;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group label {
+    transition: all 0.1s;
+    position: absolute;
+    left: 16px;
+    top: 26.5px;
+    font-size: 16px;
+    color: #545454;
+    background-color: #fff;
+    cursor: text;
+    transform: translateY(-50%);
+}
+
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label,
+.input-group textarea:focus+label,
+.input-group textarea:not(:placeholder-shown)+label,
+label.select-label {
+    top: 0px;
+    font-size: 14px;
+    padding: 0 4px;
+    border-radius: 5px;
+}
+
+.input-group textarea {
+    resize: none;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    border: 1px solid rgba(37, 39, 77, 0.7);
+    box-shadow: 0 0 0 1px rgba(37, 39, 77, 0.7);
+}
+
+button:focus-within {
+    outline: 2px solid #aaabb888;
+}
+
+button {
+    outline: 2px solid #ffffff00;
+    border-radius: 8px;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+    background-color: #25274d;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 0 0 #aaabb8;
+    transition: box-shadow 0.25s, background-color 1s, border 0.5s, outline 0.25s;
+}
+
+button:hover {
+    background-color: #212345;
+    box-shadow: 0 3px 8px rgba(37, 39, 77, 0.7);
+}
+
+button.outline:hover {
+    border: 1px solid rgba(37, 39, 77, 0.7);
+    box-shadow: 0 0 0 0.5px rgba(37, 39, 77, 0.7);
+}
+
+button.outline {
+    background-color: unset;
+    color: #25274d;
+    border: 1px solid rgba(138,145,158,0.25);
+}
+
+button.full-width {
+    width: 100%;
+}
+
+a {
+    color: #25274d !important;
+    transition: color 0.3s;
+}
+
+.link-btn:hover, a:hover {
+    color: #29648a !important;
+}
+
+.link-btn, .inline-btn {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.inline-btn {
+    border-bottom: 1px solid #25274d00;
+}
+
+.inline-btn:hover {
+    border-bottom: 1px solid #25274dff;
+}
+
+.input-desc {
+    margin-top: 8px;
+    font-size: 80%;
+}
+
+.spinner {
+    animation: spinner-rotator 1.4s linear infinite;
+    stroke: #fff;
+    vertical-align: middle;
+}
+
+.spinner-path {
+    stroke-dasharray: 187;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation: spinner-dash 1.4s ease-in-out infinite;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 34px;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 28px;
+}
+
+@keyframes spinner-rotator {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes spinner-dash {
+    0% {
+        stroke-dashoffset: 187;
+    }
+
+    50% {
+        stroke-dashoffset: 46.75;
+        transform: rotate(135deg);
+    }
+
+    100% {
+        stroke-dashoffset: 187;
+        transform: rotate(450deg);
+    }
+}

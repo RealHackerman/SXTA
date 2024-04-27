@@ -1,0 +1,65 @@
+body {
+    transition: color 3s, background-color 3s;
+    background-color: white;
+    color: black;
+}
+
+main, footer {
+    transition: opacity 1s !important;
+    opacity: 1;
+}
+
+body.launch {
+    color: white;
+    background-color: black;
+}
+
+#launch {
+    display: none;
+}
+
+#countdown {
+    display: none;
+}
+
+#countdown > div {
+    opacity: 0;
+    transition: opacity 0.2s, font-size 1s;
+    position: absolute;
+    display: inline-block;
+    font-size: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+.wipe {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0;
+    top: 0;
+    transition: height 0.15s, opacity 0.2s;
+}
+
+.blue {
+    background-color: aquamarine;
+}
+
+.purple {
+    background-color: rebeccapurple;
+}
+
+.green {
+    background-color: green;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.red {
+    background-color: orangered;
+}

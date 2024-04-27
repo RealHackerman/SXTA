@@ -1,0 +1,31 @@
+{
+    "name": "seqta-2.0",
+    "version": "0.0.1",
+    "description": "SEQTA but better.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/RealHackerman/seqta-2.0.git"
+    },
+    "author": "RealHackerman",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/RealHackerman/seqta-2.0/issues"
+    },
+    "homepage": "https://github.com/RealHackerman/seqta-2.0#readme",
+    "dependencies": {
+        "compression": "^1.7.4",
+        "cookie-parser": "^1.4.6",
+        "dotenv": "^16.0.3",
+        "ejs": "^3.1.9",
+        "express": "^4.18.2",
+        "helmet": "^6.0.1",
+        "sanitize-html": "^2.13.0"
+    },
+    "devDependencies": {
+        "jshint": "^2.13.0"
+    }
+}

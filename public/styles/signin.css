@@ -1,0 +1,118 @@
+html {
+    width: 100vw;
+    height: 100vh;
+}
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color:#25274d;
+}
+
+main {
+    width: 100%;
+    max-width: 448px;
+    transition: height 0.25s;
+    overflow: hidden;
+}
+
+main > * {
+    margin: 0 42px;
+}
+
+form {
+    margin: 34px 42px;
+    transition: all 0.25s ease-in-out;
+    left: 0;
+    transform: scale(1,1);
+    position: relative;
+}
+
+#confirm-form {
+    left: 100%;
+    transform: scale(0.75,0.75);
+    display: none;
+}
+
+.submit-btn {
+    margin-top: 34px;
+}
+
+#SID-continue-btn {
+    margin-bottom: 16px;
+}
+
+#selected-user {
+    text-align: left;
+    height: 53px;
+    margin-bottom: 16px;
+}
+
+span.selected-user-text {
+    max-width: calc(100% - 48px);
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (min-width: 601px) {
+    main {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 28px;
+        position: absolute;
+        border: 1px solid rgba(138,145,158,0.25);
+        border-radius: 16px;
+    }
+}
+
+#signin-title {
+    font-family: "Work Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    padding: 34px 0 0 3px;
+}
+
+.legal-terms {
+    text-align: center;
+    font-size: 80%;
+    margin: 34px 0;
+    cursor: default;
+}
+
+.link-btn {
+    margin-top: 16px;
+}
+
+.user-icon, .right-icon {
+    fill: #25274d;
+}
+
+.user-icon {
+    display: inline;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    transform: translateY(-5px);
+}
+
+.right-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 17px;
+    right: 17px;
+}
+
+#submit-btn {
+    margin-top: 26px;
+}
+
+.help-dialogue > * {
+    margin: 32px 0;
+}
+
+#download-app-btn, .help-dialogue ol {
+    margin-top: 12px;
+}
