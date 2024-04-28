@@ -63,3 +63,19 @@ body.launch {
 .red {
     background-color: orangered;
 }
+
+h1 {
+    text-wrap: nowrap;
+}
+
+@media (max-width: 420px) {
+    h1 {
+        font-size: 40px !important;
+    }
+}
+
+@media (max-width: 350px) {
+    h1 {
+        font-size: 30px !important;
+    }
+}
