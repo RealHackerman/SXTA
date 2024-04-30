@@ -98,6 +98,7 @@ function getSeqta(endpoint, SID, options) {
         resolve(data);
       })
       .catch(err => {
+        console.log(err);
         reject(
           new Error("Failed to verify SEQTA response is valid.", {cause: err}),
         );
