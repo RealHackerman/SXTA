@@ -64,7 +64,7 @@ function getSeqta(endpoint, SID, options) {
         new Error("No SID provided to getSeqta function."),
       );
     }
-    fetch(`https://${process.env.SEQTA_DOMAIN}/${endpoint}`, {
+    fetch(`https://${"learn.concordia.sa.edu.au"}/${endpoint}`, {
       "headers": {
         "accept": "text/javascript, text/html, application/xml, text/xml, */*",
         "accept-language": "en-US,en;q=0.9",
@@ -77,7 +77,7 @@ function getSeqta(endpoint, SID, options) {
         "sec-fetch-site": "same-origin",
         "x-requested-with": "XMLHttpRequest",
         "cookie": `JSESSIONID=${SID};`,
-        "Referer": `https://${process.env.SEQTA_DOMAIN}/`,
+        "Referer": `https://${"learn.concordia.sa.edu.au"}/`,
         "Referrer-Policy": "strict-origin-when-cross-origin"
       },
       "body": JSON.stringify(options) || "{}",
@@ -98,7 +98,6 @@ function getSeqta(endpoint, SID, options) {
         resolve(data);
       })
       .catch(err => {
-        console.log(err);
         reject(
           new Error("Failed to verify SEQTA response is valid.", {cause: err}),
         );
