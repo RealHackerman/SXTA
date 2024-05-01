@@ -64,6 +64,7 @@ function getSeqta(endpoint, SID, options) {
         new Error("No SID provided to getSeqta function."),
       );
     }
+    console.log(`GETTING: https://${"learn.concordia.sa.edu.au"}/${endpoint}`);
     fetch(`https://${"learn.concordia.sa.edu.au"}/${endpoint}`, {
       "headers": {
         "accept": "text/javascript, text/html, application/xml, text/xml, */*",
@@ -87,7 +88,7 @@ function getSeqta(endpoint, SID, options) {
         if (res.status !== 200) return reject(
           new Error("Seqta request returned non-200 HTTP response."),
         );
-        console.log(res.text());
+        console.log(res);
         return res.json();
       })
       .then(data => {
