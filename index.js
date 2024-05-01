@@ -88,16 +88,17 @@ function getSeqta(endpoint, SID, options) {
         if (res.status !== 200) return reject(
           new Error("Seqta request returned non-200 HTTP response."),
         );
-        console.log(res);
-        return res.json();
+        return res.text();
+        // return res.json();
       })
       .then(data => {
-        if (data.status !== "200") {
-          return reject(
-            new Error("Seqta request returned non-200 HTTP response."),
-          );
-        }
-        resolve(data);
+        console.log(data);
+        // if (data.status !== "200") {
+        //   return reject(
+        //     new Error("Seqta request returned non-200 HTTP response."),
+        //   );
+        // }
+        // resolve(data);
       })
       .catch(err => {
         reject(
