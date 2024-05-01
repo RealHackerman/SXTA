@@ -64,41 +64,47 @@ function getSeqta(endpoint, SID, options) {
         new Error("No SID provided to getSeqta function."),
       );
     }
-    console.log(`GETTING: https://${"learn.concordia.sa.edu.au"}/${endpoint}`);
-    fetch(`https://${"learn.concordia.sa.edu.au"}/${endpoint}`, {
-      "headers": {
-        "accept": "text/javascript, text/html, application/xml, text/xml, */*",
-        "accept-language": "en-US,en;q=0.9",
-        "content-type": "application/json; charse:set=UTF-8",
-        "sec-ch-ua": "\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"",
-        "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": "\"Windows\"",
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-origin",
-        "x-requested-with": "XMLHttpRequest",
-        "cookie": `JSESSIONID=${SID};`,
-        "Referer": `https://${"learn.concordia.sa.edu.au"}/`,
-        "Referrer-Policy": "strict-origin-when-cross-origin"
-      },
+    // fetch(`https://${"learn.concordia.sa.edu.au"}/${endpoint}`, {
+    //   "headers": {
+    //     "accept": "text/javascript, text/html, application/xml, text/xml, */*",
+    //     "accept-language": "en-US,en;q=0.9",
+    //     "content-type": "application/json; charse:set=UTF-8",
+    //     "sec-ch-ua": "\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"",
+    //     "sec-ch-ua-mobile": "?0",
+    //     "sec-ch-ua-platform": "\"Windows\"",
+    //     "sec-fetch-dest": "empty",
+    //     "sec-fetch-mode": "cors",
+    //     "sec-fetch-site": "same-origin",
+    //     "x-requested-with": "XMLHttpRequest",
+    //     "cookie": `JSESSIONID=${SID};`,
+    //     "Referer": `https://${"learn.concordia.sa.edu.au"}/`,
+    //     "Referrer-Policy": "strict-origin-when-cross-origin"
+    //   },
+    //   "body": JSON.stringify(options) || "{}",
+    //   "method": "POST"
+    // })
+    fetch(`https://barnacle-gentle-instantly.ngrok-free.app/api/${endpoint}`, {
       "body": JSON.stringify(options) || "{}",
-      "method": "POST"
+      "method": "POST",
+      "headers": {
+        "cookie": `JSESSIONID=${SID};`,
+        "accept": "text/javascript, text/html, application/xml, text/xml, */*",
+        "content-type": "application/json",
+      }
     })
       .then(res => {
         if (res.status !== 200) return reject(
           new Error("Seqta request returned non-200 HTTP response."),
         );
-        return res.text();
-        // return res.json();
+        return res.json();
       })
       .then(data => {
-        console.log(data);
-        // if (data.status !== "200") {
-        //   return reject(
-        //     new Error("Seqta request returned non-200 HTTP response."),
-        //   );
-        // }
-        // resolve(data);
+        if (data.status !== "200") {
+          return reject(
+            new Error("Seqta request returned non-200 HTTP response."),
+          );
+        }
+        resolve(data);
       })
       .catch(err => {
         reject(
