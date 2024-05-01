@@ -24,7 +24,7 @@ jobs:
       - name: Deploy
         run: |
           gcloud run deploy sxta \
-          --region asia-east1 \
+          --region australia-southeast2-a \
           --source . \
           --platform managed \
           --allow-unauthenticated \
