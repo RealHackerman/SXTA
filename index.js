@@ -87,6 +87,7 @@ function getSeqta(endpoint, SID, options) {
         if (res.status !== 200) return reject(
           new Error("Seqta request returned non-200 HTTP response."),
         );
+        console.log(res.text());
         return res.json();
       })
       .then(data => {
